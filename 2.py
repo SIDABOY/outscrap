@@ -279,6 +279,8 @@ async def callback_minute(context: ContextTypes.DEFAULT_TYPE):
         os.remove("output2.csv")
         await context.bot.send_document('1481376283', document)
         await context.bot.send_message(chat_id='1481376283', text='Enviado')
+        await context.bot.send_document('5812124182', document)
+        await context.bot.send_message(chat_id='5812124182', text='Enviado')
 
 def main() -> None:
     """Start the bot."""
