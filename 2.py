@@ -277,15 +277,13 @@ async def callback_minute(context: ContextTypes.DEFAULT_TYPE):
         os.rename("metadata.pdf", "List.pdf")    
         os.remove("output.csv")
         os.remove("output2.csv")
-        await context.bot.send_document('1481376283', document)
-        await context.bot.send_message(chat_id='1481376283', text='Enviado')
-        await context.bot.send_document('5812124182', document)
-        await context.bot.send_message(chat_id='5812124182', text='Enviado')
+        await context.bot.send_document('-1001900358349', document)
+        await context.bot.send_message(chat_id='-1001900358349', text='Enviado')
 
 def main() -> None:
     """Start the bot."""
     # Create the Application and pass it your bot's token.
-    application = Application.builder().token("5462188589:AAH9xKvjAr4UPkb1wJneXO2gjeWfmrNdIZQ").build()
+    application = Application.builder().token("6699364920:AAFvlrP7_g1xGEKMzdPpDnL_IOmn4jRyw98").build()
     job_queue = application.job_queue
     job_minute = job_queue.run_repeating(callback_minute, interval=60, first=10)
 
